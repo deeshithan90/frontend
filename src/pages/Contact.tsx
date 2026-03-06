@@ -2,56 +2,8 @@ import { FaAddressBook, FaMailBulk, FaPhone, FaWhatsapp } from "react-icons/fa"
 import Map from "../components/Map"
 import FAQ from "../components/FAQ"
 import FAQS from "../components/FAQS"
-import { useState } from "react";
-import toast from "react-hot-toast";
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-      FullName: "",
-      Phone: "",
-      Email: "",
-      DisCribe: ""
-    });
-  
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value
-      });
-    };
-  
-  
-    const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-  
-      try {
-        const response = await fetch(`https://backend-2-ca7m.onrender.com/api/en`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(formData)
-        });
-  
-        const data = await response.json();
-  
-        if (data.success) {
-          toast.success("Enquiry Submitted Successfully");
-          setFormData({
-            FullName: "",
-            Phone: "",
-            Email: "",
-            DisCribe: ""
-          });
-        } else {
-          toast.error(data.message);
-        }
-  
-      } catch (error) {
-        toast.error("Server error");
-        console.log(error)
-      }
-    };
   return (
     <>
       {/* Header Section */}

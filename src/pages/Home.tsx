@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import sai from '../pages/sai-v.mp4'
 import WhyChoose from "../components/WhyChoose";
 import Pink from "../components/Pink";
@@ -8,7 +8,6 @@ import ProductsOne from "../components/ProductsOne";
 import FAQS from "../components/FAQS";
 
 const Home = () => {
-  const audioRef = useRef(null);
   const [set,settext] = useState(false)
   const [btn,setBtn] = useState(true)
 const handleReadmore = ()=>{
@@ -19,20 +18,11 @@ const handlereadless = ()=>{
   settext(false)
   setBtn(true)
 }
-  useEffect(() => {
-    const handleFirstInteraction = () => {
-      audioRef.current.play();
-      window.removeEventListener("click", handleFirstInteraction);
-    };
-
-    window.addEventListener("click", handleFirstInteraction);
-  }, []);
 
   return (
     <>
       <div className='mt-45s hs'>
         <div className="w-full mx-auto z-0 h-screen object-cover pointer-events-none">
-          <audio ref={audioRef} src={""} />
           <video
             src={sai}
             autoPlay
