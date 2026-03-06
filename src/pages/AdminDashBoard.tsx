@@ -22,7 +22,6 @@ export default function AdminDashboard() {
       const res = await fetch(`https://backend-2-ca7m.onrender.com/api/admin/enquiries`,{
         credentials: "include"
       });
-      console.log("Cookies:", res.cookies);
       const data: { success: boolean; data: Enquiry[]; message?: string } = await res.json();
 
       if (data.success) {

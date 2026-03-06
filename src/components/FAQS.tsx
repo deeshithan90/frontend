@@ -1,5 +1,3 @@
-import { FaRobot, FaTypo3 } from "react-icons/fa"
-
 const FAQS = () => {
   const speak2 = () => {
     window.speechSynthesis.cancel()
