@@ -46,9 +46,8 @@ const handlereadless = ()=>{
       </center>
       <div className="flexs gap-5 ml-7 mss">
         <h1 className="mt-0 text-4xl font-bold">About - "Sai Office Furniture"</h1>
-        <img src="/Sai-c.png" className="w-[100px] h-[100px] rounded-full p-3 spin" />
       </div>
-      <div className="p-2 mt-0 flex justify-between mss">
+      <div className="p-2 mt-0 flexs justify-between mss">
         <div>
         <p className="p-5 mb-0">
            Sai Enterprises is a trusted office furniture manufacturer in Chennai, Tamil Nadu, specializing in high-quality, ergonomic, and customized workspace solutions. We design and manufacture modular workstations, executive tables, office chairs, conference tables, reception desks, and storage solutions tailored to modern business environments.
@@ -56,7 +55,7 @@ const handlereadless = ()=>{
           {btn ? <span className="c-s-ss font-bold hover:cursor-pointer hover:underline" onClick={handleReadmore}>Read More</span> : <span className="c-s-ss font-bold hover:cursor-pointer hover:underline" onClick={handlereadless}>Read less</span>}
         </p>  
         </div>
-        <a href="/Inderste"><img src="/Bn.webp" className="w-[800px]" alt="Study Chair" /></a>
+        <a href="/Inderste"><img src="/about.webp" className="w-[800px]" alt="Executive Chair" /></a>
       </div>
       <Pink/>
       <div className="mt-30">

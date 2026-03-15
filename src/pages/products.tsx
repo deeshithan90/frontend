@@ -28,16 +28,16 @@ const Products = () => {
       </div>
     </div>
     {/**Executive Chair */}
-    <div className="grid grid-cols-4 gap-6 mt-20 mb-0 p-6 mss" id="1">
+    <div className="grid grid-cols-4 gap-2 mt-20 mb-0 p-6 mss" id="1">
       <h1 className="col-span-4 text-black text-4xl mb-6">
         Executive Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {Executive.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-60 object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -49,11 +49,11 @@ const Products = () => {
         Office Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {Office.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -65,11 +65,11 @@ const Products = () => {
          Reception desk | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {Recipition.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full object-cover shss border"
+            className="w-full object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -81,11 +81,11 @@ const Products = () => {
           Confernce Table | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {Workstations.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-50 object-cover shss border"
+            className="w-full h-50 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -97,11 +97,11 @@ const Products = () => {
           Beam Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {BeamChairs.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-50 object-cover shss border"
+            className="w-full h-50 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -113,11 +113,11 @@ const Products = () => {
           Bar chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {BarChair.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-50 object-cover shss border"
+            className="w-full h-50 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -129,11 +129,11 @@ const Products = () => {
           Plastic chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {platic.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-90 object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -145,11 +145,11 @@ const Products = () => {
           Wire Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {Wire.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-90 object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -161,11 +161,11 @@ const Products = () => {
           Study Table | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {study.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-60 object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -177,11 +177,11 @@ const Products = () => {
           Stool Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {stool.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-full object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -193,11 +193,11 @@ const Products = () => {
           Medical trolley | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {trolley.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-60 object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -209,11 +209,11 @@ const Products = () => {
           Cot | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {cot.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-60 object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -226,11 +226,11 @@ const Products = () => {
           Cafeteria chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {Cafeteriachair.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-60 object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
@@ -242,11 +242,11 @@ const Products = () => {
           Ms Frames | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
       </h1>
       {MSFrames.map((item) => (
-        <div key={item.id} className="text-white">
+        <div key={item.id} className="text-white border-2 border-black">
           <img
             src={item.image}
             alt={item.id}
-            className="w-full h-70 object-cover shss border"
+            className="w-full h-60 object-cover border"
           />
           <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
         </div>
