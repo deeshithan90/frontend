@@ -50,8 +50,6 @@ export default function EnquiryPopup() {
   // Submit enquiry
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!accepted) return toast.error("Please accept cookies first!");
-
     try {
       const response = await fetch("https://backend-2-ca7m.onrender.com/api/en", {
         method: "POST",
@@ -63,7 +61,6 @@ export default function EnquiryPopup() {
       const data = await response.json();
       if (data.success) {
         toast.success("Enquiry Submitted Successfully");
-        setIsOpen(false);
         setFormData({ FullName: "", Phone: "", Email: "", DisCribe: "" });
       } else {
         toast.error(data.message);
@@ -87,7 +84,6 @@ export default function EnquiryPopup() {
           <textarea name="DisCribe" value={formData.DisCribe} onChange={handleChange} placeholder="Your Requirement" className="border-1 w-full p-2" required />
 
           <div className="flex items-center space-x-2">
-            <input type="checkbox" id="acceptCookies" checked={accepted} onChange={() => setAccepted(!accepted)} />
             <label htmlFor="acceptCookies">
               I accept cookies and agree to <span className="font-bold text-blue-400 cursor-pointer"><a onClick={() => window.location.href='/cookie'}>Terms & Conditions</a></span>
             </label>

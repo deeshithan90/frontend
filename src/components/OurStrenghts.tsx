@@ -7,13 +7,14 @@ const OurStrenghts = () => {
              className='w-[250px] p-3 zoom-in shadowss'
              src='/ours/1.png'
             />
-            <ul className="grid grid-cols-1 gap-3 text-2xl">
+            <ul className="grid grid-cols-1 gap-0 text-2xl p-2">
                <li>Smart Furniture Integration</li>
                <li>Sustainable & Circular Manufacturing</li>
                <li>Advanced Surface Technologies</li>
+               <li>Digital Production Planning</li>
             </ul>
         </div>
-        <div className='mt-0 flexs gap-40 ml-o80 mss'>
+        <div className='mt-0 flexs gap-40 ml-o80 mss p-2'>
             <ul className="grid grid-cols-1 gap-3 text-2xl">
                <li>Quality Control Specailists</li>
                <li>Strong Design & Invovation Culture</li>
@@ -30,14 +31,14 @@ const OurStrenghts = () => {
              className='w-[250px] p-3 zoom-in shadowss'
              src='/ours/3.png'
             />
-            <ul className="grid grid-cols-1 gap-3 text-2xl">
+            <ul className="grid grid-cols-1 gap-3 text-2xl p-2">
                <li>High-Strength Metal Framework</li>
                <li>Sustainable & Eco-Friendly Materials</li>
                <li>Heavy-Duty Hardware & Fittings</li>
                <li>Edge Protection</li>
             </ul>
         </div>
-        <div className='mt-0  flexs gap-40 ml-o80 mss'>
+        <div className='mt-0  flexs gap-40 ml-o80 mss p-2'>
           <ul className="grid grid-cols-1 gap-3 text-2xl">
                <li>High-Volume Manufacturing Capability</li>
                <li>Large-Scale Factory Infrastruture</li>
@@ -54,14 +55,14 @@ const OurStrenghts = () => {
              className='w-[250px] p-3 zoom-in shadowss'
              src='/ours/5.png'
             />
-            <ul className="grid grid-cols-1 gap-3 text-2xl">
+            <ul className="grid grid-cols-1 gap-3 text-2xl p-2">
                <li>Multi-Stage Inspection System</li>
                <li>Load & Durability Testing</li>
                <li>Hardware Performence Verification</li>
                <li>Customer Feedback Integration</li>
          </ul>
         </div>
-        <div className='mt-0 ml-080 flexs gap-40 mss'>   
+        <div className='mt-0 ml-080 flexs gap-40 mss p-2'>   
           <ul className="grid grid-cols-1 gap-3 text-2xl">
                <li>Dedicated After-Sales Service Team</li>
                <li>Fast Spare Parts Availability</li>

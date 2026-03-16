@@ -19,6 +19,7 @@ const FAQ = () => {
     const [text15,setText15] = useState(false)
     const [text16,setText16] = useState(false)
     const [text17,setText17] = useState(false)
+    const [text18,setText18] = useState(false)
 
 
     function Y1(){
@@ -40,6 +41,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY2(){
         setText1(false)
@@ -60,6 +62,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY3(){
         setText1(false)
@@ -80,6 +83,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY4(){
         setText1(false)
@@ -100,6 +104,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY5(){
         setText1(false)
@@ -120,6 +125,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY6(){
         setText1(false)
@@ -140,6 +146,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY7(){
         setText1(false)
@@ -160,6 +167,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY8(){
         setText1(false)
@@ -180,6 +188,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY9(){
         setText1(false)
@@ -200,6 +209,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY10(){
         setText1(false)
@@ -220,6 +230,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY11(){
        setText1(false)
@@ -240,6 +251,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false) 
        SetChange(true)
+       setText18(false)
     }
      function onClicksY12(){
         setText1(false)
@@ -260,6 +272,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY13(){
         setText1(false)
@@ -280,6 +293,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY14(){
         setText1(false)
@@ -300,6 +314,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY15(){
         setText1(false)
@@ -320,6 +335,7 @@ const FAQ = () => {
        setText16(false)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY16(){
         setText1(false)
@@ -340,6 +356,7 @@ const FAQ = () => {
        setText16(true)
        setText17(false)
        SetChange(true)
+       setText18(false)
     }
      function onClicksY17(){
         setText1(false)
@@ -360,6 +377,29 @@ const FAQ = () => {
        setText16(false)
        setText17(true)
        SetChange(true)
+       setText18(false)
+    }
+
+    function onClicksY18(){
+        setText1(false)
+       setText2(false)
+       setText3(false)
+       setText4(false)
+       setText5(false)
+       setText6(false)
+       setText7(false)
+       setText8(false)
+       setText9(false)
+       setText10(false)
+       setText11(false)
+       setText12(false)
+       setText13(false)
+       setText14(false)
+       setText15(false)
+       setText16(false)
+       setText17(false)
+       SetChange(true)
+       setText18(true)
     }
 
     return (
@@ -382,8 +422,9 @@ const FAQ = () => {
               {text13 ? "Yes, as a manufacturer in Chennai, we offer factory-direct pricing without middlemen, ensuring cost-effective solutions." : ""}
               {text14 ? "Yes, we provide reliable after-sales service and maintenance support for long-term customer satisfaction." : ""}
               {text15 ? "Sai Enterprises is known for quality manufacturing, customized solutions, competitive pricing, timely delivery, and professional installation services — making us a preferred office furniture manufacturer in Chennai, Tamil Nadu." : ""}
-              {text16 ? "Yes, You can Contact Through Mobile,mail,whatsapp and Direct visit" : ""}
+              {text16 ? "Yes, You can Contact Through Mobile : 72002 57412 ,Mail : admin@saiofficefurniture.in , Whatsapp :  76049 48552" : ""}
               {text17 ? "Yes, we accept all type of payment- Debit card,credit card, NEFT,UPI and Cheque" : ""}
+              {text18 ? "Yes, You can download it form menu bar." : ""}
         </div>
             <div className="flexs justify-center mt-0 mb-0 w-full p-5 text-[13px] ">
                 <div className="grid grid-cols-5 gap-4 w-full p-0 mds">
@@ -437,6 +478,9 @@ const FAQ = () => {
                     </div>
                     <div onClick={onClicksY17}>
                         <h2 className="cursor-pointer hover:text-blue-400">17. Do you accept Cheque payment?</h2>
+                    </div>
+                    <div onClick={onClicksY18}>
+                        <h2 className="cursor-pointer hover:text-blue-400">18. Is Products catalog available?</h2>
                     </div>
                 </div>
             </div>

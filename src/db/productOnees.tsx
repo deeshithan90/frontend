@@ -102,7 +102,7 @@ const productOnees = [
         url : "one/15.webp",
         Code : "Cabinet",
         codes : 'AVK-398',
-        nav : '/navigate/pdf/cb.pdf'
+        nav : '/navigate/webp/cb.webp'
     },
     {
         id : '016',

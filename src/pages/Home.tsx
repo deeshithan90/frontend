@@ -59,9 +59,9 @@ const handlereadless = ()=>{
       </div>
       <Pink/>
       <div className="mt-30">
-        <h1 className="text-4xl font-bold mb-10">Manufacturing process</h1>
+        <h1 className="text-4xl font-bold mb-10 p-3">Manufacturing process</h1>
       </div>
-      <div className="flex justify-around mss">
+      <div className="flex justify-around mss p-3">
         <ul className="grid grid-cols-1 gap-5">
                 <li className="text-3xl underlines">Design & Planning</li>
                 <li className="text-3xl underlines">Material Selection</li>
@@ -89,6 +89,12 @@ const handlereadless = ()=>{
         <WhyChoose/>
         <OurStrenghts/>
         <ProductsOne/>
+        <h1 className="text-5xl mt-10 p-4">Customized and Provided</h1>
+        <div className="gap-20 mt-10 p-4">
+            <div className="w-80 h-100 border-black border-2 shss">
+                <img src="/navigate/webp/nv.webp" className="w-full h-full" alt="" />
+            </div>
+        </div>
         <FAQ/>
         <FAQS/>
     </>

@@ -277,7 +277,7 @@
    box-shadow: white 2px 2px 2px 10px;
 }
     .shss:hover{
-        box-shadow: #8A2037 20px 30px 90px 20px;
+        box-shadow: #8A2037 10px 10px 10px 10px;
     }
 
     @keyframes fases {
