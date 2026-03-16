@@ -17,8 +17,7 @@ export default function EnquiryPopup() {
       .split("; ")
       .find(row => row.startsWith("cookieConsent="));
 
-    if (!cookie) setIsOpen(true);
-    else setAccepted(true);
+    if (!cookie) console.log("cookie get")
   }, []);
 
   setTimeout(()=>{
