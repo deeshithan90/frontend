@@ -3,7 +3,6 @@ import toast from "react-hot-toast";
 
 export default function EnquiryPopup() {
   const [isOpen, setIsOpen] = useState(false);
-  const [accepted,setAccepted] = useState(false);
   const [formData, setFormData] = useState({
     FullName: "",
     Phone: "",
@@ -37,7 +36,6 @@ export default function EnquiryPopup() {
       });
       const data = await res.json();
       if (data.success) {
-        setAccepted(true);
         setIsOpen(false);
         toast.success("Cookies Accepted");
       }
