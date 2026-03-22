@@ -1,259 +1,180 @@
+import React from "react";
 import FAQ from "../components/FAQ";
 import FAQS from "../components/FAQS";
-import BarChair from "../db/BarChair";
-import BeamChairs from "../db/BeamChairs";
-import Cafeteriachair from "../db/Cafeteriachair";
-import cot from "../db/cot";
-import Executive from "../db/Excutive";
-import MSFrames from "../db/MSFrames";
-import Office from "../db/Office";
-import platic from "../db/plastic";
-import Recipition from "../db/Recipition";
-import stool from "../db/stool";
-import study from "../db/Study";
-import trolley from "../db/trolley";
-import Wire from "../db/WireChair";
-import Workstations from "../db/WorkStations";
 
-const Products = () => {
+// ✅ Type
+type SectionProps = {
+  title: string;
+  folder: string;
+  images: string[];
+  id: string;
+};
+
+// ✅ Section Component
+const Section: React.FC<SectionProps> = ({ title, folder, images, id }) => {
+  return (
+    <div id={id} className="mt-10 mb-10 p-6">
+      <h1 className="text-black text-3xl md:text-4xl mb-6">
+        {title} |{" "}
+        <a href="/contact" className="underline">
+          Enquiry Now
+        </a>
+      </h1>
+
+      {/* ✅ One image per row */}
+      <div className="flex flex-col gap-6">
+        {images.map((img, i) => (
+          <img
+            key={i}
+            src={`/n3/${folder}/${img}`}
+            alt={`${title} ${i + 1}`}
+            className="w-full h-auto object-cover rounded-lg shadow"
+            onError={(e) => {
+              e.currentTarget.style.display = "none"; // ❌ hide broken image
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// ✅ Main Component
+const Products: React.FC = () => {
   return (
     <>
-    <div className="mb-10 mt-40 shadowss flexs justify-around mss">
-      <div className="fade w-full">
-         <h1 className="text-5xl text-center">Premium Office Furniture Solutions in Chennai, Tamil Nadu</h1>
-         <h2 className="text-3xl text-center">Customized Office Furniture Manufacturing an End-to-End Office Setup Solutions</h2>
+      {/* Header */}
+      <div className="mt-32 mb-10 px-6 flex flex-col lg:flex-row items-center gap-10">
+        <div className="w-full">
+          <h1 className="text-3xl md:text-5xl zoom-ins">
+            Premium Office Furniture Solutions in Chennai, Tamil Nadu
+          </h1>
+          <h2 className="text-xl md:text-3xl mt-4">
+            Customized Office Furniture Manufacturing and End-to-End Office Setup Solutions
+          </h2>
+        </div>
+
+        <img
+          src="/product/Head/bg.png"
+          alt="Furniture"
+          className="w-[300px] md:w-[400px]"
+        />
       </div>
-      <div>
-          <img src="/product/Head/bg.png" className="w-[400px] h-[600px]" />
-      </div>
-    </div>
-    {/**Executive Chair */}
-    <div className="grid grid-cols-4 gap-2 mt-20 mb-0 p-6 mss" id="1">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-        Executive Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {Executive.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**Office Chair */}
-     <div id="2" className="grid grid-cols-4 gap-6 mt-0 mb-0 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-        Office Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {Office.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**Recipition Desk */}
-    <div id="3" className="grid grid-cols-4 gap-6 mt-0 mb-0 p-6 mss">
-      <h1  className="col-span-4 text-black text-4xl mb-6">
-         Reception desk | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {Recipition.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**Confernece Table */}
-    <div id="4" className="grid grid-cols-4 gap-6 mt-0 mb-0 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Confernce Table | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {Workstations.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-50 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**Beam Chair */}
-    <div id="5" className="grid grid-cols-4 gap-6 mt-0 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Beam Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {BeamChairs.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-50 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**Bar chair */}
-    <div id="6"  className="grid grid-cols-4 gap-6 mt-10 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Bar chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {BarChair.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-50 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/** Plastic chair*/}
-    <div id="7"  className="grid grid-cols-4 gap-6 mt-10 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Plastic chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {platic.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/** Wire Chair */}
-    <div id="8"  className="grid grid-cols-4 gap-6 mt-10 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Wire Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {Wire.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**Study Table */}
-    <div id="9"  className="grid grid-cols-4 gap-6 mt-10 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Study Table | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {study.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**Stool chair */}
-     <div id="10"  className="grid grid-cols-4 gap-6 mt-10 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Stool Chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {stool.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-          {/** Medical trolley */}
-    <div id="11"  className="grid grid-cols-4 gap-6 mt-10 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Medical trolley | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {trolley.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**Cot */}
-    <div id="12"  className="grid grid-cols-4 gap-6 mt-10 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Cot | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {cot.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-   
-    {/** Cafteria Chair */}
-    <div className="grid grid-cols-4 gap-6 mt-0 mb-0 p-6 mss">
-      <h1 id="13" className="col-span-4 text-black text-4xl mb-6">
-          Cafeteria chair | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {Cafeteriachair.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    {/**MS Frames */}
-    <div id="14" className="grid grid-cols-4 gap-6 mt-0 mb-10 p-6 mss">
-      <h1 className="col-span-4 text-black text-4xl mb-6">
-          Ms Frames | <span className="cursor-pointer underline c-s-ss"><a href="/contact">Enquriy Now</a></span>
-      </h1>
-      {MSFrames.map((item) => (
-        <div key={item.id} className="text-white border-2 border-black">
-          <img
-            src={item.image}
-            alt={item.id}
-            className="w-full h-60 object-cover border"
-          />
-          <p className="mt-2 text-center text-black font-bold">{item.Code}</p>
-        </div>
-      ))}
-    </div>
-    <FAQ/>
-    <FAQS/>
+
+      {/* Sections */}
+
+      <Section
+        title="Executive Chair"
+        folder="Exe"
+        id="1"
+        images={["1.webp", "2.webp", "3.webp"]}
+      />
+
+      <Section
+        title="Director Chair"
+        folder="dir"
+        id="2"
+        images={["1.webp"]}
+      />
+
+      <Section
+        title="Workstation"
+        folder="work"
+        id="3"
+        images={["1.webp", "2.webp"]}
+      />
+
+      <Section
+        title="Visitor Chair"
+        folder="Vi"
+        id="4"
+        images={["1.webp", "2.webp","3.webp"]}
+      />
+
+      <Section
+        title="Writing Chair"
+        folder="Wri"
+        id="5"
+        images={["1.webp","2.webp"]}
+      />
+
+      <Section
+        title="Cabinet"
+        folder="Cab"
+        id="6"
+        images={["1.webp","2.webp","3.webp"]}
+      />
+
+      <Section
+        title="Student Desk"
+        folder="Stud"
+        id="7"
+        images={["1.webp","2.webp","3.webp"]}
+      />
+
+      <Section
+        title="cafeteria chair"
+        folder="caf"
+        id="8"
+        images={["1.webp","2.webp","3.webp","4.webp","5.webp",]} // ✅ 5 images
+      />
+     
+      <Section
+        title="Metro sofa"
+        folder="Met"
+        id="9"
+        images={["1.webp"]}
+      />
+      <Section
+        title="Wire Chair"
+        folder="Cab"
+        id="10"
+        images={["1.webp","2.webp","3.webp"]}
+      />
+      <Section
+        title="Bar chair"
+        folder="bar"
+        id="11"
+        images={["1.webp"]}
+      />
+      <Section
+        title="Stool"
+        folder="stool"
+        id="12"
+        images={["1.webp",]}
+      />
+      <Section
+        title="Medical Trolley"
+        folder="med"
+        id="13"
+        images={["1.webp"]}
+      />
+      <Section
+        title="Cot"
+        folder="cot"
+        id="14"
+        images={["1.webp",]}
+      />
+      <Section
+        title="Dinning Table"
+        folder="dt"
+        id="15"
+        images={["1.webp"]}
+      />
+      <Section
+        title="Sample Frame"
+        folder="sf"
+        id="16"
+        images={["1.webp","2.webp"]}
+      />
+      <Section
+        title="Table"
+        folder="ta"
+        id="17"
+        images={["1.webp",]}
+      />
+      <FAQ />
+      <FAQS />
     </>
   );
 };

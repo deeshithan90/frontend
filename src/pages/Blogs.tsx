@@ -16,11 +16,10 @@ const Blogs = () => {
                     </p>
                 </div>
                 <div className="shadow-2xl p-5 border-2">
-                    <h1 className='text-3xl font-bold mt-3 mb-3'>Choosing the Right Office Furniture in Chennai</h1>
-                    <img src="/blogs/2.avif" className="w-full" />
+                    <h1 className='text-3xl font-bold mt-3 mb-3'>Office Furniture Manufacturer High-Quality Solutions for Modern Workspaces</h1>
+                    <img src="/blogs/2.webp" className="w-1/2" />
                     <p className="w-full font-bold mt-3 mb-3">
-                        Selecting the right office furniture depends on space, budget, and work style. Modular workstations, executive tables, conference tables, and storage units should match your business requirements.
-                        Sai Office Furniture Manufacturer, Chennai offers customized office furniture solutions across Tamil Nadu.
+                        In today’s fast-paced business environment, a well-designed office is more than just a workspace—it reflects your brand, enhances productivity, and improves employee well-being. As a leading office furniture manufacturer, we specialize in creating ergonomic, durable, and stylish furniture solutions tailored to modern office needs.
                     </p>
                 </div>
                 <div className="shadow-2xl p-5 border-2">

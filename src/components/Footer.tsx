@@ -22,7 +22,7 @@ const Footer = () => {
                     <h1 className="text-2xl mb-10 mt-10 underline">Contact showroom</h1>
                     <div className="grid grid-cols-1 w-[300px] gap-5">
                         <p className="flexs mss gap-2"> ➤sai Enterprises : 3/25 Kamarajar Salai, Senthamil Nagar,Ramapuram, Chennai 600089</p>
-                        <p className="flexs gap-2"><FaPhone size={20} /> : (+91) 72002 57412</p>
+                        <p className="flexs gap-2"><FaPhone size={20} /> : (+91) 76049 48552 | 72002 57412</p>
                         <p className="flexs gap-2">☎️ : 044-46057637</p>
                         <p className="flexs gap-2"><FaWhatsapp color="green" size={20} /> : (+91) 72002 57412</p>
                         <p className="flexs gap-3"><FaMailBulk size={30} /> : admin@saiofficefurniture.in | vr.saienterprises2024@gmail.com</p>

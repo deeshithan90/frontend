@@ -96,20 +96,23 @@ const Navbar = () => {
                   </div>
 
                   <div className="grid grid-cols-2 gap-2">
-                    <a href="#1" className="hover:underline">Executive chair</a>
-                    <a href="#2" className="hover:underline">Office chair</a>
-                    <a href="#3" className="hover:underline">Reception desk</a>
-                    <a href="#4" className="hover:underline">Conference Table</a>
-                    <a href="#5" className="hover:underline">Beam chair</a>
-                    <a href="#6" className="hover:underline">Bar Chair</a>
-                    <a href="#7" className="hover:underline">Plastic chair</a>
-                    <a href="#8" className="hover:underline">Wire chair</a>
-                    <a href="#9" className="hover:underline">Study Table</a>
-                    <a href="#10" className="hover:underline">Stool Chair</a>
-                    <a href="#11" className="hover:underline">Medical trolley</a>
-                    <a href="#12" className="hover:underline">Cot</a>
-                    <a href="#13" className="hover:underline">Cafeteria chair</a>
-                    <a href="#14" className="hover:underline">Ms Frames</a>
+                    <a href="#1" className="hover:underline">Executive</a>
+                    <a href="#2" className="hover:underline">Director Chair</a>
+                    <a href="#3" className="hover:underline">Work station</a>
+                    <a href="#4" className="hover:underline">Visitor Chair</a>
+                    <a href="#5" className="hover:underline">Writing Chair</a>
+                    <a href="#6" className="hover:underline">Cabinet</a>
+                    <a href="#7" className="hover:underline">Student Desk</a>
+                    <a href="#8" className="hover:underline">Cafeteria chair</a>
+                    <a href="#9" className="hover:underline">Metro sofa</a>
+                    <a href="#10" className="hover:underline">Wire Chair</a>
+                    <a href="#11" className="hover:underline">Bar chair</a>
+                    <a href="#12" className="hover:underline">Stool</a>
+                    <a href="#13" className="hover:underline">Medical Trolley</a>
+                    <a href="#14" className="hover:underline">Cot</a>
+                    <a href="#15" className="hover:underline">Dinning Table</a>
+                    <a href="#16" className="hover:underline">Sample Frame</a>
+                    <a href="#17" className="hover:underline">Table</a>
                   </div>
 
                 </div>}

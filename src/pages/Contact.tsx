@@ -37,12 +37,12 @@ const Contact = () => {
 
             <p className="flex items-center gap-3 mb-4">
               <FaPhone />
-              (+91) 72002 57412
+              (+91) 76049 48552 | 72002 57412
             </p>
 
             <p className="flex items-center gap-3 mb-4">
               <FaWhatsapp />
-              (+91) 76049 48552
+              (+91) 72002 57412
             </p>
 
             <p className="flex items-center gap-3 mb-4">
