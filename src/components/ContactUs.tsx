@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 
 export default function EnquiryPopup() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasConsent, setHasConsent] = useState(false);
   const [formData, setFormData] = useState({
     FullName: "",
     Phone: "",
@@ -12,16 +13,30 @@ export default function EnquiryPopup() {
 
   // Check cookie on load
   useEffect(() => {
-    const cookie = document.cookie
-      .split("; ")
-      .find(row => row.startsWith("cookieConsent="));
+  const cookie = document.cookie
+    .split("; ")
+    .find(row => row.startsWith("cookieConsent="));
 
-    if (!cookie) console.log("cookie get")
-  }, []);
+  let timer: NodeJS.Timeout;
 
-  setTimeout(()=>{
-      setIsOpen(true)
-  },150000)
+  if (cookie) {
+    setHasConsent(true);
+
+    // show after 5 min
+    timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 300000);
+  } else {
+    setHasConsent(false);
+
+    // show immediately
+    setIsOpen(true);
+  }
+
+  return () => {
+    if (timer) clearTimeout(timer);
+  };
+}, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -29,20 +44,23 @@ export default function EnquiryPopup() {
 
   // Accept cookies
   const handleAcceptCookies = async () => {
-    try {
-      const res = await fetch("https://backend-2-ca7m.onrender.com/api/accept-cookies", {
-        method: "POST",
-        credentials: "include"
-      });
-      const data = await res.json();
-      if (data.success) {
-        setIsOpen(false);
-        toast.success("Cookies Accepted");
-      }
-    } catch (err) {
-      toast.error("Failed to accept cookies");
+  try {
+    const res = await fetch("https://backend-2-ca7m.onrender.com/api/accept-cookies", {
+      method: "POST",
+      credentials: "include"
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      setHasConsent(true); // ✅ important
+      setIsOpen(false);
+      toast.success("Cookies Accepted");
     }
-  };
+  } catch (err) {
+    toast.error("Failed to accept cookies");
+  }
+};
 
   // Submit enquiry
   const handleSubmit = async (e: React.FormEvent) => {
@@ -79,15 +97,28 @@ export default function EnquiryPopup() {
           <input type="tel" name="Phone" value={formData.Phone} onChange={handleChange} placeholder="Phone" className="border-1 w-full p-2" required />
           <input type="email" name="Email" value={formData.Email} onChange={handleChange} placeholder="Email" className="border-1 w-full p-2" required />
           <textarea name="DisCribe" value={formData.DisCribe} onChange={handleChange} placeholder="Your Requirement" className="border-1 w-full p-2" required />
+{!hasConsent && (
+  <>
+    <div className="flex items-center space-x-2">
+      <label>
+        I accept cookies and agree to{" "}
+        <span className="font-bold text-blue-400 cursor-pointer">
+          <a onClick={() => window.location.href='/cookie'}>
+            Terms & Conditions
+          </a>
+        </span>
+      </label>
+    </div>
 
-          <div className="flex items-center space-x-2">
-            <label htmlFor="acceptCookies">
-              I accept cookies and agree to <span className="font-bold text-blue-400 cursor-pointer"><a onClick={() => window.location.href='/cookie'}>Terms & Conditions</a></span>
-            </label>
-          </div>
-
-          <button type="button" onClick={handleAcceptCookies} className="w-full bg-own p-3 rounded-3xl text-white">Accept Cookies & Close</button>
-          <button type="submit" className="w-full bg-own p-3 rounded-3xl text-white">Submit Enquiry</button>
+    <button
+      type="button"
+      onClick={handleAcceptCookies}
+      className="w-full bg-own p-3 rounded-3xl text-white"
+    >
+      Accept Cookies & Close
+    </button>
+  </>
+)}
         </form>
       </div>
     </div>

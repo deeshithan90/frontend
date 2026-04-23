@@ -67,6 +67,10 @@
         box-shadow: #D4AF37 20px 30px 90px 20px;
     }
 
+    .hj{
+        background-color: #567D46;
+    }
+
     .fot {
         color: #2e2e2e;
         font-weight: bold;
@@ -75,6 +79,14 @@
 
     .h-c {
         height: 450px;
+    }
+
+    .typing{
+        font-size: 50px;
+    }
+
+    .t{
+        color: black;
     }
 
     .c-s-cc{

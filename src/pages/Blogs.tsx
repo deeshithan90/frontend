@@ -8,51 +8,53 @@ const Blogs = () => {
         <h1 className="text-4xl font-bold mt-0 p-5 underline text-black">Blogs</h1>
             <div className="gap-10 mt-5 p-10 grid grid-cols-2 mss">
                 <div className="shadow-2xl p-5 border-2">
-                    <h1 className='text-3xl font-bold mt-3 mb-3'>Why Quality Office Furniture Matters for Productivity</h1>
-                    <img src="/blogs/1.jpg" className="w-full" />
+                    <h1 className='text-3xl font-bold mt-3 mb-3'>How to Choose Ergonomic Office Furniture for Better Productivity</h1>
+                    <img src="/blogs/1.webp" className="w-full" />
                     <p className="w-full font-bold mt-3 mb-3">
-                        Good office furniture plays an important role in employee productivity. Comfortable chairs, spacious desks, and well-designed workstations help improve focus and reduce physical strain.
-                        At Sai Office Furniture Manufacturer in Chennai, we design durable and ergonomic furniture solutions tailored to modern office needs.
+                       Choosing ergonomic office furniture is essential for maintaining employee health and improving productivity. Ergonomic chairs with lumbar support, adjustable armrests, and seat height help prevent back pain and fatigue. Sit-stand desks are also gaining popularity as they allow users to alternate between sitting and standing, reducing the risks associated with prolonged sitting.
+                       When selecting ergonomic furniture, consider adjustability, material quality, and user comfort. Investing in ergonomic solutions not only enhances efficiency but also reduces absenteeism caused by workplace discomfort.
                     </p>
                 </div>
                 <div className="shadow-2xl p-5 border-2">
-                    <h1 className='text-3xl font-bold mt-3 mb-3'>Office Furniture Manufacturer High-Quality Solutions for Modern Workspaces</h1>
-                    <img src="/blogs/2.webp" className="w-1/2" />
+                    <h1 className='text-3xl font-bold mt-3 mb-3'>Top Office Furniture Trends in 2026</h1>
+                    <img src="/blogs/2.webp" className="w-full" />
                     <p className="w-full font-bold mt-3 mb-3">
-                        In today’s fast-paced business environment, a well-designed office is more than just a workspace—it reflects your brand, enhances productivity, and improves employee well-being. As a leading office furniture manufacturer, we specialize in creating ergonomic, durable, and stylish furniture solutions tailored to modern office needs.
+                        Office furniture trends are evolving to match modern work culture. Minimalist designs with clean lines are dominating workspaces, creating clutter-free environments. Sustainable furniture made from eco-friendly materials is becoming a priority for businesses aiming to reduce their environmental footprint.
+                        Smart furniture, such as desks with built-in charging ports and cable management systems, is also on the rise. Additionally, collaborative furniture setups like open seating and modular desks are transforming offices into dynamic and flexible spaces.
                     </p>
                 </div>
                 <div className="shadow-2xl p-5 border-2">
-                    <h1 className='text-3xl font-bold mt-3 mb-3'>Benefits of Modular Office Furniture</h1>
-                    <img src="/blogs/3.jfif" className="w-full" />
+                    <h1 className='text-3xl font-bold mt-3 mb-3'>Space-Saving Office Furniture Ideas for Small Offices</h1>
+                    <img src="/blogs/3.webp" className="w-full" />
                     <center>
                         <p className="w-full font-bold mt-3 mb-3 text-left">
-                            Modular office furniture is flexible, space-saving, and cost-effective. It allows businesses to redesign their workspace easily as they grow.
-                            We manufacture high-quality modular office furniture in Chennai with modern designs and long-lasting materials.
+                           Maximizing space in small offices can be challenging, but the right furniture makes a big difference. Compact desks, foldable tables, and wall-mounted storage units help utilize limited space efficiently. Multi-functional furniture, such as desks with built-in storage, reduces clutter and improves organization.
+                           Vertical storage solutions like shelves and cabinets also help free up floor space. By choosing smart furniture designs, even small offices can feel spacious and productive.
                         </p>
                     </center>
                 </div>
                 <div className="shadow-2xl p-5 border-2">
-                    <h1 className='text-3xl font-bold mt-3 mb-3'>Custom Office Furniture Solutions</h1>
-                    <img src="/blogs/4.jpg" className="w/2" />
+                    <h1 className='text-3xl font-bold mt-3 mb-3'>Benefits of Investing in High-Quality Office Furniture</h1>
+                    <img src="/blogs/4.webp" className="w/2" />
                     <p className="w-full font-bold mt-3 mb-3">
-                        Every office has unique needs. Custom furniture ensures proper space utilization and brand alignment.
-                        Sai Office Furniture Manufacturer provides customized office tables, chairs, storage units, and conference setups in Chennai.
+                       High-quality office furniture is a long-term investment that pays off in multiple ways. Durable furniture reduces the need for frequent replacements, saving costs over time. It also enhances the professional appearance of your workspace, leaving a positive impression on clients and visitors.
+                       Moreover, well-built furniture ensures better comfort and safety for employees. Quality materials and sturdy construction contribute to a healthier and more efficient work environment.
                     </p>
                 </div>
                 <div className="shadow-2xl p-5 border-2">
-                    <h1 className='text-3xl font-bold mt-3 mb-3'>Durable and Long-Lasting Office Furniture</h1>
-                    <img src="/blogs/5.jpg" className="w/2" />
+                    <h1 className='text-3xl font-bold mt-3 mb-3'>How Office Furniture Impacts Employee Productivity</h1>
+                    <img src="/blogs/5.webp" className="w/2" />
                     <p className="w-full font-bold mt-3 mb-3">
                         Investing in durable office furniture reduces long-term costs. High-quality materials ensure strength, comfort, and a professional look.
                         We focus on quality manufacturing standards to deliver reliable office furniture across Chennai and Tamil Nadu.
                     </p>
                 </div>
                 <div className="shadow-2xl p-5 border-2">
-                    <h1 className='text-3xl font-bold mt-3 mb-3'>Modern Office Furniture Trends</h1>
-                    <img src="/blogs/6.png" className="w-full mt-10 mb-10" alt="" />
+                    <h1 className='text-3xl font-bold mt-3 mb-3'>Modern Office Furniture Design Ideas for a Stylish Workspace</h1>
+                    <img src="/blogs/6.webp" className="w-full mt-10 mb-10" alt="" />
                     <p className="w-full font-bold mt-3 mb-3">
-                        The modern workplace is evolving, and so is office furniture. Today’s businesses are investing in ergonomic seating, modular workstations, and collaborative layouts that enhance productivity and employee wellbeing. At SAI ENTERPRISES we design office furniture that balances style, comfort, and durability helping organizations create workspaces that inspire performance and reflect their brand identity.
+                        Modern office furniture combines functionality with aesthetics to create inspiring workspaces. Neutral color palettes, sleek finishes, and minimalist designs are widely used to achieve a contemporary look. Glass desks, metal frames, and wooden textures add sophistication to office interiors.
+                        Incorporating lounge seating, breakout areas, and creative furniture arrangements can also enhance collaboration and innovation. A stylish workspace not only boosts employee morale but also strengthens brand identity.
                     </p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import {FaFacebook, FaInstagram, FaMailBulk, FaWhatsapp,FaPhone, FaAddressCard} from "react-icons/fa"
 const Footer = () => {
     return (
-        <footer className="bg-gray-800 text-white" id="id">
+        <footer className="hj text-white" id="id">
             <div className="flex justify-between mss">
                 <div className="grid grid-cols-4 w-o mss gap-0 p-30">
                     <p style={{ fontSize: 13 }} className="cursor-pointer text-white hover:underline" onClick={() => window.location.href = "/"}>Home</p>

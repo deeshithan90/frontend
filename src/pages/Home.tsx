@@ -89,12 +89,17 @@ const handlereadless = ()=>{
         <WhyChoose/>
         <OurStrenghts/>
         <ProductsOne/>
-        <h1 className="text-5xl mt-10 p-4">Customized and Provided</h1>
-        <div className="gap-20 mt-10 p-4">
-            <div className="w-80 h-100 border-black border-2 shss">
+        <h1 className="text-4xl mt-10 p-4">Customized</h1>
+        <h1 className="text-4xl ml-4">and Provided</h1>
+        <div className="gap-30 mt-10 p-4 flex items-center justify-center">
+            <div className="w-80 h-80 border-black border-2 shss">
                 <img src="/navigate/webp/nv.webp" className="w-full h-full" alt="" />
             </div>
+            <div className="typing">
+                <h1>Chennai's Most Trusted Furniture Manfacturer | <span className="t">Sai EnterPrises</span></h1>
+            </div>
         </div>
+        {/**Chennai's Most Trusted Furniture Manfacturer Sai EnterPrises */}
         <FAQ/>
         <FAQS/>
     </>
