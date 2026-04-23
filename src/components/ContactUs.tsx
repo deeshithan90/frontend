@@ -17,7 +17,7 @@ export default function EnquiryPopup() {
     .split("; ")
     .find(row => row.startsWith("cookieConsent="));
 
-  let timer: NodeJS.Timeout;
+  let timer: ReturnType<typeof setTimeout>;;
 
   if (cookie) {
     setHasConsent(true);
