@@ -90,7 +90,7 @@ const handlereadless = ()=>{
         <OurStrenghts/>
         <ProductsOne/>
         <h1 className="text-4xl mt-10 p-4">Customized</h1>
-        <h1 className="text-4xl ml-4">and Provided</h1>
+        <h1 className="text-4xl ml-4">and Provider</h1>
         <div className="gap-30 mt-10 p-4 flex items-center justify-center">
             <div className="w-80 h-80 border-black border-2 shss">
                 <img src="/navigate/webp/nv.webp" className="w-full h-full" alt="" />
